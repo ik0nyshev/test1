@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(helloworld)
+add_executable(${PROJECT_NAME} main.cpp)
+set(BUILD_VERSION 1)
+configure_file(build.h.in build.h @ONLY)
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
